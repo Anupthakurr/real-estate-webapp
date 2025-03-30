@@ -1,69 +1,65 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import { motion } from "framer-motion"; // Fix import
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 200 }} // Starts off-screen to the right
-      animate={{ opacity: 1, x: 0 }} // Moves to center
-      transition={{ duration: 1.5, ease: "easeOut" }} // Smooth transition
-      whileInView={{ opacity: 1, x: 0 }} // Ensures visibility while in view
-      viewport={{ once: false }} // Allows re-animation on scroll
+      initial={{ opacity: 0, x: 200 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.5, ease: "easeOut" }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false }}
       className="flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden"
       id="about"
     >
-      <h1 className="text-2xl sm:text-4xl font-bold mb-2">
+      <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
         About{" "}
-        <span className="underline underline-offset-4 decoration-1 font-light">
+        <span className="underline decoration-wavy decoration-indigo-500">
           Our Brand
         </span>
       </h1>
-      <p className="text-gray-500 max-w-80 text-center mb-8">
+      <p className="text-gray-500 max-w-xl text-center mb-12">
         Passionate About Properties, Dedicated to Your Vision
       </p>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="flex flex-col md:flex-row items-center md:items-start md:gap-20"
+        className="flex flex-col md:flex-row items-center md:items-start gap-20"
       >
         <img
           src={assets.brand_img}
           alt=""
-          className="w-full sm:w-1/2 max-w-lg"
+          className="w-full sm:w-1/2 max-w-lg rounded-lg shadow-lg"
         />
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="flex flex-col items-center md:items-start mt-10 text-gray-600"
-        >
-          <div className="grid grid-cols-2 gap-6 md:gap-10 w-full 2xl pr-28">
+        <div className="flex flex-col items-center md:items-start mt-10 text-gray-600">
+          <div className="grid grid-cols-2 gap-10 w-full">
             {[
-              { value: "10+", label: "years of Excellence" },
-              { value: "12+", label: "projects completed" },
+              { value: "10+", label: "Years of Excellence" },
+              { value: "12+", label: "Projects Completed" },
               { value: "20+", label: "Mn. sq. ft Delivered" },
-              { value: "25+", label: "ongoing projects" },
+              { value: "25+", label: "Ongoing Projects" },
             ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.3 }}
+                className="p-4 bg-white rounded-lg shadow-lg text-center hover:bg-indigo-100 transition-colors"
               >
-                <p className="text-4xl font-medium text-gray-800">
+                <p className="text-3xl font-bold text-indigo-600">
                   {item.value}
                 </p>
                 <p>{item.label}</p>
               </motion.div>
             ))}
           </div>
-          <p className="my-10 max-w-lg">
+          <p className="my-10 max-w-lg text-center md:text-left">
             Welcome to Apna Homes, where dreams of finding the perfect home
             become a reality. With years of expertise in the real estate
             industry, we specialize in connecting buyers, sellers, and investors
-            with properties that match their unique needs and aspirations.
+            with properties that match their unique needs.
           </p>
           <motion.a
             initial={{ opacity: 0, scale: 0.9 }}
@@ -78,7 +74,7 @@ const About = () => {
               <span className="relative">Learn More</span>
             </span>
           </motion.a>
-        </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );
