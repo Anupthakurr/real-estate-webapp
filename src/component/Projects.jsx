@@ -45,16 +45,17 @@ const Projects = () => {
       <p className="text-center text-gray-500 mb-8 max-w-xl mx-auto">
         Explore my recent projects below
       </p>
+
       <div className="flex justify-center items-center mb-8 gap-4">
         <button
           onClick={prevProject}
-          className="p-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 shadow-lg transition-all"
+          className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full hover:scale-110 shadow-lg transition-transform"
         >
           ←
         </button>
         <button
           onClick={nextProject}
-          className="p-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 shadow-lg transition-all"
+          className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full hover:scale-110 shadow-lg transition-transform"
         >
           →
         </button>
@@ -62,7 +63,7 @@ const Projects = () => {
 
       <div className="overflow-hidden relative">
         <div
-          className="flex gap-6 transition-transform duration-500 ease-in-out"
+          className="flex gap-10 transition-transform duration-700 ease-in-out"
           style={{
             transform: `translateX(-${(currentIndex * 100) / cardsToshow}%)`,
           }}
@@ -70,17 +71,22 @@ const Projects = () => {
           {projectsData.map((project, index) => (
             <motion.div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 bg-white rounded-xl shadow-md overflow-hidden"
-              whileHover={{ scale: 1.05 }}
+              className="relative flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 bg-white rounded-xl shadow-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all"
+              whileHover={{ y: -10 }}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-                <p className="text-gray-600">{project.description}</p>
+              <div className="relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-60 object-cover rounded-t-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-30 rounded-t-xl" />
+              </div>
+              <div className="p-6 bg-gradient-to-br from-white to-indigo-100">
+                <h2 className="text-xl font-bold mb-2 text-blue-700">
+                  {project.title}
+                </h2>
+                <p className="text-gray-700">{project.description}</p>
               </div>
             </motion.div>
           ))}
