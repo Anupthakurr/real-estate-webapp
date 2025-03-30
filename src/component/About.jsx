@@ -29,7 +29,7 @@ const About = () => {
         className="flex flex-col md:flex-row items-center md:items-start gap-20"
       >
         <img
-          src={assets.brand_img}
+          src={assets.brand1_img}
           alt=""
           className="w-full sm:w-1/2 max-w-lg rounded-lg shadow-lg"
         />
