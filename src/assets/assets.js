@@ -75,27 +75,27 @@ export const projectsData = [
 
   export const testimonialsData = [
     {
-        name: "Donald Jackman",
-        title: "Marketing Manager",
+        name: "Sophia Carter",
+        title: "Product Designer",
         image: profile_img_1,
-        alt: "Portrait of Donald Jackman",
+        alt: "Portrait of Sophia Carter",
         rating: 5,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Working with them was a game-changer! They understood my vision and turned it into reality with exceptional creativity and professionalism."
     },
     {
-        name: "Richard Nelson",
-        title: "UI/UX Designer",
+        name: "Ethan Johnson",
+        title: "Software Engineer",
         image: profile_img_2,
-        alt: "Portrait of Richard Nelson",
+        alt: "Portrait of Ethan Johnson",
         rating: 4,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Fantastic experience! The team’s attention to detail and commitment to quality exceeded my expectations."
     },
     {
-        name: "James Washington",
-        title: "Co-Founder",
+        name: "Amelia Brown",
+        title: "Marketing Specialist",
         image: profile_img_3,
-        alt: "Portrait of James Washington",
+        alt: "Portrait of Amelia Brown",
         rating: 5,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Their dedication and expertise are impressive. From start to finish, everything was smooth, and the results were outstanding."
     }
 ];
