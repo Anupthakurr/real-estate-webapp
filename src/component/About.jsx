@@ -14,13 +14,12 @@ const About = () => {
       id="about"
     >
       <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
-        About{" "}
         <span className="underline decoration-wavy decoration-indigo-500">
-          Our Brand
+          Crafting Excellence, Building Trust
         </span>
       </h1>
       <p className="text-gray-500 max-w-xl text-center mb-12">
-        Passionate About Properties, Dedicated to Your Vision
+        Redefining Real Estate – Where Dreams Find a Home
       </p>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -36,22 +35,23 @@ const About = () => {
         <div className="flex flex-col items-center md:items-start mt-10 text-gray-600">
           <div className="grid grid-cols-2 gap-10 w-full">
             {[
-              { value: "10+", label: "Years of Excellence" },
-              { value: "12+", label: "Projects Completed" },
-              { value: "20+", label: "Mn. sq. ft Delivered" },
-              { value: "25+", label: "Ongoing Projects" },
+              { value: "500+", label: "Happy Clients" },
+              { value: "150+", label: "Properties Listed" },
+              { value: "100+", label: "Cities Covered" },
+              { value: "24/7", label: "Customer Support" },
             ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.3 }}
-                className="p-4 bg-white rounded-lg shadow-lg text-center hover:bg-indigo-100 transition-colors"
+                className="relative p-6 bg-white rounded-full shadow-xl text-center border border-indigo-300 overflow-hidden transition-transform transform hover:scale-110 hover:shadow-2xl"
               >
-                <p className="text-3xl font-bold text-indigo-600">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 opacity-30 animate-pulse" />
+                <p className="relative text-3xl font-bold text-indigo-600 z-10">
                   {item.value}
                 </p>
-                <p>{item.label}</p>
+                <p className="relative z-10">{item.label}</p>
               </motion.div>
             ))}
           </div>
